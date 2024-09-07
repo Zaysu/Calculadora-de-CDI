@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/resultadoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Resultado da simulação" />
+
+    <TextView
+        android:id="@+id/rendimentoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="Rendimento" />
+
+    <TextView
+        android:id="@+id/valorAplicadoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Valor aplicado inicialmente" />
+
+    <TextView
+        android:id="@+id/valorBrutoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Valor bruto sobre o investimento" />
+
+    <TextView
+        android:id="@+id/irTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="IR sobre o investimento" />
+
+    <TextView
+        android:id="@+id/valorLiquidoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Valor líquido do investimento" />
+
+    <TextView
+        android:id="@+id/dataResgateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Data de resgate" />
+
+    <TextView
+        android:id="@+id/diasCorridosTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Dias corridos" />
+
+    <TextView
+        android:id="@+id/rendimentoMensalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Rendimento mensal" />
+
+    <TextView
+        android:id="@+id/percentualCDITextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Percentual do CDI do investimento" />
+
+    <TextView
+        android:id="@+id/rentabilidadeAnualTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Rentabilidade anual" />
+
+    <TextView
+        android:id="@+id/rentabilidadePeriodoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Rentabilidade no período" />
+
+    <!-- Botão para voltar e calcular novamente -->
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calcular novamente" />
+</LinearLayout>

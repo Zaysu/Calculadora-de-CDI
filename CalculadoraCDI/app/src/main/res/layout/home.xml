@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quanto você gostaria de Aplicar*"
+        android:textSize="15sp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/valorAplicado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R$"
+        android:inputType="numberDecimal"
+        android:textSize="55sp">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual data de vencimento do investimento*"
+        android:textSize="15sp">
+    </TextView>
+
+    <!-- Campo de EditText para data que abrirá um DatePickerDialog -->
+    <EditText
+        android:id="@+id/vencimento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="DIA/MÊS/ANO"
+        android:focusable="false"
+        android:inputType="none"
+        android:textSize="55sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual percentual do CDI do investimento*"
+        android:textSize="15sp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="100%"
+        android:inputType="numberDecimal"
+        android:textSize="55sp">
+    </EditText>
+
+    <Button
+        android:id="@+id/btn_secondscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simular">
+    </Button>
+
+</LinearLayout>
