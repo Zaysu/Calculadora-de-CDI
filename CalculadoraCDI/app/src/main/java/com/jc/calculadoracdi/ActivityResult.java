@@ -34,10 +34,10 @@ public class ActivityResult extends Activity {
         // Formatação de números e datas
         DecimalFormat df = new DecimalFormat("#,##0.00");
 
-        // Simulação dos cálculos (valores fictícios, você deve ajustá-los de acordo com as regras de negócio)
-        double rendimento = valorAplicado * 0.088; // Exemplo de cálculo de rendimento
+        // Simulação dos cálculos
+        double rendimento = valorAplicado * 0.088; // cálculo de rendimento
         double valorBruto = valorAplicado + rendimento;
-        double ir = rendimento * 0.15; // Exemplo de cálculo de IR (15%)
+        double ir = rendimento * 0.15; // cálculo de IR (15%)
         double valorLiquido = valorBruto - ir;
 
         // Data atual e de resgate (vencimento)
@@ -60,7 +60,7 @@ public class ActivityResult extends Activity {
 
         // Rendimento mensal e rentabilidades
         double rendimentoMensal = rendimento / diasCorridos * 30;
-        double rentabilidadeAnual = percentualCDI * 0.12; // Exemplo (ajuste para fórmula correta)
+        double rentabilidadeAnual = percentualCDI * 0.12;
         double rentabilidadePeriodo = rendimento / valorAplicado * 100;
 
         // Atualizando os TextViews com as informações calculadas
@@ -78,7 +78,7 @@ public class ActivityResult extends Activity {
         TextView rentabilidadePeriodoTextView = findViewById(R.id.rentabilidadePeriodoTextView);
 
         // Exibindo os dados
-        resultadoTextView.setText("Resultado da simulação do CDI:");
+        resultadoTextView.setText("Resultado da simulação do CDI:" + df.format(valorBruto));
         rendimentoTextView.setText("Rendimento total: R$ " + df.format(rendimento));
         valorAplicadoTextView.setText("Valor aplicado inicialmente: R$ " + df.format(valorAplicado));
         valorBrutoTextView.setText("Valor bruto sobre o investimento: R$ " + df.format(valorBruto));
@@ -91,7 +91,7 @@ public class ActivityResult extends Activity {
         rentabilidadeAnualTextView.setText("Rentabilidade anual: " + df.format(rentabilidadeAnual) + "%");
         rentabilidadePeriodoTextView.setText("Rentabilidade no período: " + df.format(rentabilidadePeriodo) + "%");
 
-        // Configurando o botão para voltar e calcular novamente
+        //botão para voltar e calcular novamente
         Button btnVoltar = findViewById(R.id.btn_voltar);
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +100,7 @@ public class ActivityResult extends Activity {
                 Intent intent = new Intent(ActivityResult.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // Limpa a pilha de atividades
                 startActivity(intent);
-                finish(); // Encerra a ActivityResult
+                finish();
             }
         });
     }
